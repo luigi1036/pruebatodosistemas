@@ -94,3 +94,8 @@ En caso de que se elimine la tarea de la base de datos, el método devuelve como
 * Gradle
 * Spring boot
 * Mysql
+
+##Recursos
+Se agrega el script de la base de datos usada para pruebas del proyecto
+con el nombre: 
+* ###todolist.sql
