@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@CrossOrigin(origins = {"http://localhost: 4200", "*"}, maxAge = 5000)
 @RestController
 @RequestMapping("/tareas")
 public class TareaController {
@@ -31,6 +32,7 @@ public class TareaController {
     // servicio que obtiene una tarea por su id
     @GetMapping("/tarea/{id}")
     public ResponseEntity<Map<String, Object>> getTask(@PathVariable Long id){
+        System.out.println("id = " + id);
         Tarea tarea = null;
         Map<String, Object> response = new HashMap<>();
 
@@ -122,6 +124,7 @@ public class TareaController {
     // servico para eliminar una tarea por su id
     @DeleteMapping("/tarea/{id}")
     public ResponseEntity<Map<String, Object>> deletetask(@PathVariable Long id){
+        System.out.println("llego a eliminar: "+ id);
         Map<String, Object> response = new HashMap<>();
 
         try {

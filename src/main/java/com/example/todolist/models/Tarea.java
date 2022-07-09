@@ -1,5 +1,6 @@
 package com.example.todolist.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
@@ -28,6 +29,7 @@ public class Tarea implements Serializable {
 
     @Temporal(javax.persistence.TemporalType.DATE)
     @Column(name = "fechaejecucion")
+    @JsonFormat(pattern="yyyy/MM/dd")
     private Date fechaEjecucion;
 
     @Column(name = "diasretraso")
